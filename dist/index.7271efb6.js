@@ -27327,8 +27327,11 @@ var _s = $RefreshSig$();
 const Header = ()=>{
     _s();
     //   let btnName = 'Login';
-    const [btnNameReact, setBtnNameReact] = (0, _react.useState)('Login');
-    console.log('header render');
+    const [btnNameReact, setBtnNameReact] = (0, _react.useState)("Login");
+    console.log("header render");
+    (0, _react.useEffect)(()=>{
+        console.log("useEffect called");
+    });
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "header",
         children: [
@@ -27340,12 +27343,12 @@ const Header = ()=>{
                     className: "logo"
                 }, void 0, false, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 13,
+                    lineNumber: 17,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 12,
+                lineNumber: 16,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27356,62 +27359,62 @@ const Header = ()=>{
                             children: "Home"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 17,
+                            lineNumber: 21,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "About Us"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 18,
+                            lineNumber: 22,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Contact Us"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 19,
+                            lineNumber: 23,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Cart"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 20,
+                            lineNumber: 24,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                             className: "loginBtn",
                             onClick: ()=>{
                                 //   btnName = 'Logout';
-                                btnNameReact === 'Login' ? setBtnNameReact('Logout') : setBtnNameReact('Login');
+                                btnNameReact === "Login" ? setBtnNameReact("Logout") : setBtnNameReact("Login");
                                 console.log(btnNameReact);
                             },
                             children: btnNameReact
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 21,
+                            lineNumber: 25,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 16,
+                    lineNumber: 20,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 15,
+                lineNumber: 19,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Header.js",
-        lineNumber: 11,
+        lineNumber: 15,
         columnNumber: 5
     }, undefined);
 };
-_s(Header, "wW5vRF+5uCxBA41obhNSIzVMLnI=");
+_s(Header, "qBUFNnZRatZ4wvcPIOqbTGy9X/M=");
 _c = Header;
 exports.default = Header;
 var _c;
@@ -27637,6 +27640,7 @@ const Body = ()=>{
     }, []);
     const fetchData = async ()=>{
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.7876015&lng=80.216658&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        console.log(data);
         const json = await data.json();
         console.log(json);
         // * optional chaining

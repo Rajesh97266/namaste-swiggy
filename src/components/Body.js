@@ -24,7 +24,7 @@ const Body = () => {
     const data = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.7876015&lng=80.216658&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
-
+    console.log(data);
     const json = await data.json();
 
     console.log(json);

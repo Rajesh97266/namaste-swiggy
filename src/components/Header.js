@@ -1,11 +1,15 @@
-import { LOGO_URL } from '../utils/constants';
-import { useState } from 'react';
+import { LOGO_URL } from "../utils/constants";
+import { useState, useEffect } from "react";
 
 const Header = () => {
   //   let btnName = 'Login';
 
-  const [btnNameReact, setBtnNameReact] = useState('Login');
-  console.log('header render');
+  const [btnNameReact, setBtnNameReact] = useState("Login");
+  console.log("header render");
+
+  useEffect(() => {
+    console.log("useEffect called");
+  });
 
   return (
     <div className="header">
@@ -22,9 +26,9 @@ const Header = () => {
             className="loginBtn"
             onClick={() => {
               //   btnName = 'Logout';
-              btnNameReact === 'Login'
-                ? setBtnNameReact('Logout')
-                : setBtnNameReact('Login');
+              btnNameReact === "Login"
+                ? setBtnNameReact("Logout")
+                : setBtnNameReact("Login");
               console.log(btnNameReact);
             }}
           >
