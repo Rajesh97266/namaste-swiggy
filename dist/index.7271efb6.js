@@ -2955,76 +2955,8 @@ var _header = require("./components/Header");
 var _headerDefault = parcelHelpers.interopDefault(_header);
 var _body = require("./components/Body");
 var _bodyDefault = parcelHelpers.interopDefault(_body);
-/* Components of Our Food-Order App
- * Header
- * - Logo
- * - Nav Items
- * Body
- * - Search Bar
- * - Restaurant-Container
- *  - Restaurant-Card
- *    - Img
- *    - Name of Res, Star Rating, cuisine, delivery time.
- * Footer
- * - Copyright
- * - Links
- * - Address
- * - Contact
- */ //  const styleCard = {
-//   backgroundColor: '#f0f0f0',
-// };
-// * Props :
-// * prop -> is Just a JS Object
-// * Note: When you have to dainamically pass in a data to a component, you pass in prop
-// const RestaurantCard = (props) => {
-// console.log(props);
-// * Note We can also destructure props on the fly by wrapping them in between {}, this is like...
-// * const { resName, cuisine } = props;
-// const RestaurantCard = ({ resName, cuisine }) => {
-//   console.log({ resName, cuisine });
-// * not using keys (not acceptable) <<<< index as a key <<<<<<<<<< unique id (is the best  practice)
-// * What is Config-driven-UI -> A "config-driven UI" is a user interface that is built and configured using a declarative configuration file or data structure, rather than being hardcoded.
-// * Every company now-a-days follows these approach, because our Appications need to be Dynamic These Days
-// * Note: A Good Senior Frontend engineer is - who is a good UI Layer Engineer and a good Data Layer Engineer
-/* Episode 05 Let's get Hookd ------------------------------------------------------------------------------------------------------ 
- * There are 2 type of Export/Import
- *   1) Defalut Export/Import
- *        export default Component;
- *        import Component from 'path';
-
- *   2) Name Export/Import
- *        export const Component;
- *        import { Component } from 'path'; 
- 
-*/ const currYear = new Date().getFullYear();
-const Footer = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("footer", {
-        className: "footer",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-            children: [
-                "Copyright \xa9 ",
-                currYear,
-                ", Made with \uD83D\uDC97 by ",
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
-                    children: "Rajesh"
-                }, void 0, false, {
-                    fileName: "src/App.js",
-                    lineNumber: 70,
-                    columnNumber: 54
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/App.js",
-            lineNumber: 69,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/App.js",
-        lineNumber: 68,
-        columnNumber: 5
-    }, undefined);
-};
-_c = Footer;
+var _footer = require("./components/Footer");
+var _footerDefault = parcelHelpers.interopDefault(_footer);
 const AppLayout = ()=>{
     // console.log(<Body />);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3032,43 +2964,42 @@ const AppLayout = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 80,
+                lineNumber: 11,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 81,
+                lineNumber: 12,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Footer, {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 82,
+                lineNumber: 13,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 79,
+        lineNumber: 10,
         columnNumber: 5
     }, undefined);
 };
-_c1 = AppLayout;
+_c = AppLayout;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 88,
+    lineNumber: 19,
     columnNumber: 13
 }, undefined));
-var _c, _c1;
-$RefreshReg$(_c, "Footer");
-$RefreshReg$(_c1, "AppLayout");
+var _c;
+$RefreshReg$(_c, "AppLayout");
 
   $parcel$ReactRefreshHelpers$f00f.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header":"hsJbF","./components/Body":"8yaV8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header":"hsJbF","./components/Body":"8yaV8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Footer":"8pPOA"}],"iTorj":[function(require,module,exports,__globalThis) {
 'use strict';
 module.exports = require("ee51401569654d91");
 
@@ -27331,7 +27262,9 @@ const Header = ()=>{
     console.log("header render");
     (0, _react.useEffect)(()=>{
         console.log("useEffect called");
-    });
+    }, [
+        btnNameReact
+    ]);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "header",
         children: [
@@ -27388,7 +27321,7 @@ const Header = ()=>{
                             onClick: ()=>{
                                 //   btnName = 'Logout';
                                 btnNameReact === "Login" ? setBtnNameReact("Logout") : setBtnNameReact("Login");
-                                console.log(btnNameReact);
+                            // console.log(btnNameReact);
                             },
                             children: btnNameReact
                         }, void 0, false, {
@@ -28050,6 +27983,54 @@ $RefreshReg$(_c, "Shimmer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["aQL8O","7T53S","2kQhy"], "2kQhy", "parcelRequire94c2")
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8pPOA":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$bc7c.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Footer = ()=>{
+    const currYear = new Date().getFullYear();
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("footer", {
+        className: "footer",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            children: [
+                "Copyright \xa9 ",
+                currYear,
+                ", Made with \uD83D\uDC97 by ",
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                    children: "Rajesh"
+                }, void 0, false, {
+                    fileName: "src/components/Footer.js",
+                    lineNumber: 6,
+                    columnNumber: 54
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/Footer.js",
+            lineNumber: 5,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/Footer.js",
+        lineNumber: 4,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Footer;
+exports.default = Footer;
+var _c;
+$RefreshReg$(_c, "Footer");
+
+  $parcel$ReactRefreshHelpers$bc7c.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["aQL8O","7T53S","2kQhy"], "2kQhy", "parcelRequire94c2")
 
 //# sourceMappingURL=index.7271efb6.js.map

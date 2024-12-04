@@ -9,7 +9,7 @@ const Header = () => {
 
   useEffect(() => {
     console.log("useEffect called");
-  });
+  }, [btnNameReact]);
 
   return (
     <div className="header">
@@ -29,7 +29,7 @@ const Header = () => {
               btnNameReact === "Login"
                 ? setBtnNameReact("Logout")
                 : setBtnNameReact("Login");
-              console.log(btnNameReact);
+              // console.log(btnNameReact);
             }}
           >
             {btnNameReact}
